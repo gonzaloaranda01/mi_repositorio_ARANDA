@@ -1,8 +1,4 @@
-/* Copyright 2014, Mariano Cerdeiro
- * Copyright 2014, Pablo Ridolfi
- * Copyright 2014, Juan Cecconi
- * Copyright 2014, Gustavo Muro
- *
+/*
  * This file is part of CIAA Firmware.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -67,7 +63,6 @@
 //#include "ciaaPOSIX_stdio.h"  /* <= device handler header */
 //#include "ciaaPOSIX_string.h" /* <= string header */
 //#include "ciaak.h"            /* <= ciaa kernel header */
-//#include "Led.h"         /* <= own header */
 #include "chip.h"         /* <= own header */
 
 /*==================[macros and definitions]=================================*/
@@ -99,10 +94,17 @@
  */
 
 
-void habilitoInterrupcion(void)
+int Serie_on(char s)
 {
+return s;
+}
 
-	 NVIC_EnableIRQ(RITIMER_IRQn);
+void Serie_off(void)
+ {
 
+ }
+
+void inicializarSerie()
+{
 
 }

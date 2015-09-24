@@ -1,8 +1,4 @@
-/* Copyright 2014, Mariano Cerdeiro
- * Copyright 2014, Pablo Ridolfi
- * Copyright 2014, Juan Cecconi
- * Copyright 2014, Gustavo Muro
- *
+/*
  * This file is part of CIAA Firmware.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -110,7 +106,7 @@ int timer_on(uint8_t flag)
 	else if (flag == 0)
 	{
 		tiempo = 0;
-		//Chip_RIT_ClearInt();
+		//Chip_RIT_ClearInt(LPC_RITIMER);
 	}
 
 	return tiempo;
@@ -119,7 +115,7 @@ int timer_on(uint8_t flag)
  void timer_off(void)
  {
 
-	//Chip_RIT_ClearInt();
+	Chip_RIT_ClearInt(LPC_RITIMER);
  }
 
 

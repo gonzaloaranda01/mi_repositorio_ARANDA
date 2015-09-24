@@ -33,9 +33,11 @@
  *
  */
 
-/** \brief Blinking_echo example source file
+#ifndef LED_H
+#define LED_H
+/** \brief Blinking example header file
  **
- ** This is a mini example of the CIAA Firmware.
+ ** This is a mini example of the CIAA Firmware
  **
  **/
 
@@ -43,66 +45,39 @@
  ** @{ */
 /** \addtogroup Examples CIAA Firmware Examples
  ** @{ */
-/** \addtogroup Blinking Blinking_echo example source file
+/** \addtogroup Blinking Blinking example header file
  ** @{ */
 
 /*
  * Initials     Name
  * ---------------------------
- * ARANDA GONZALO
+ *
  */
 
 /*
  * modification history (new versions first)
  * -----------------------------------------------------------
- * 20150603 v0.0.3   ErPe change uint8 type by uint8_t
- *                        in line 172
- * 20141019 v0.0.2   JuCe add printf in each task,
- *                        remove trailing spaces
- * 20140731 v0.0.1   PR   first functional version
+ * yyyymmdd v0.0.1 initials initial version
  */
 
 /*==================[inclusions]=============================================*/
-//#include "os.h"               /* <= operating system header */
-//#include "ciaaPOSIX_stdio.h"  /* <= device handler header */
-//#include "ciaaPOSIX_string.h" /* <= string header */
-//#include "ciaak.h"            /* <= ciaa kernel header */
-//#include "Led.h"         /* <= own header */
-#include "chip.h"         /* <= own header */
 
-/*==================[macros and definitions]=================================*/
+/*==================[macros]=================================================*/
 
-/*==================[internal data declaration]==============================*/
+/*==================[typedef]================================================*/
 
-/*==================[internal functions declaration]=========================*/
+/*==================[external data declaration]==============================*/
 
-/*==================[internal data definition]===============================*/
+/*==================[external functions declaration]=========================*/
+void encender_led(int led);
+void apagar_led(int led);
+void inicializar_led(void);
+void timer_off(int tiempo);
+void timer_on(void);
+void inicializarTimer(void);
+/** @} doxygen end group definition */
+/** @} doxygen end group definition */
+/** @} doxygen end group definition */
+/*==================[end of file]============================================*/
+#endif /* #ifndef _BLINKING_H_ */
 
-/** \brief File descriptor for digital output ports
- *
- * Device path /dev/dio/out/0
- */
-
-/*==================[external data definition]===============================*/
-
-/*==================[internal functions definition]==========================*/
-
-/*==================[external functions definition]==========================*/
-/** \brief Main function
- *
- * This is the main entry point of the software.
- *
- * \returns 0
- *
- * \remarks This function never returns. Return value is only to avoid compiler
- *          warnings or errors.
- */
-
-
-void habilitoInterrupcion(void)
-{
-
-	 NVIC_EnableIRQ(RITIMER_IRQn);
-
-
-}
