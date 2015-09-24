@@ -106,5 +106,8 @@ void Serie_off(void)
 
 void inicializarSerie()
 {
+	/* Initializes the pUART peripheral */
+	void Chip_UART_Init(LPC_USART_RBR);
+
 
 }
