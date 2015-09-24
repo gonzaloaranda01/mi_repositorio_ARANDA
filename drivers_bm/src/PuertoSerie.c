@@ -96,6 +96,7 @@
 
 int Serie_on(char s)
 {
+	// Chip_UART_Send(LPC_USART_RBR, const void *data, 1);
 return s;
 }
 
